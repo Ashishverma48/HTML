@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 15px 30px;
+    font-size: 17px;
+    padding: 8px;
+
+}
+.container{
+    background-color:rgba(159, 153, 145, 0.301);
+    padding: 5px 20px 15px 20px;
+    color: rgb(148, 13, 35);
+    border-radius: 5px;
+
+}
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="text"],
+input[type="date"],
+select,
+textarea{
+    width : 100%;
+    padding: 11px;
+    border: 1px solid red;
+}
+.payment{
+    text-align: center;
+}
+input[type="submit"]{
+    background-color: rgb(145, 149, 161);
+    color: red;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 21px;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: blue;
+
+}
