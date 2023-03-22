@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        padding: 0.3rem 1rem;
+        background-color: rgba(14, 5, 82, 0.441);
+        color: rgba(20, 19, 21, 0.543);
+      }
+      input:focus{
+        font-size: 16px;
+      }
+      button {
+        padding: 0.2rem 2rem;
+
+        margin-right: 1rem;
+      }
+
+      #button_add{
+        border-radius: 21px;
+        border: none;
+        font-size: large;
+        background-color: chocolate;
+      }
+
+      #button_sub{
+        border-radius: 21px;
+        border: none;
+        font-size: large;
+        background-color: rgb(126, 128, 107);
+
+      }
+      #button_mul{
+        border-radius: 21px;
+        border: none;
+        font-size: large;
+        background-color: rgb(19, 179, 67);
+
+      }
+      #button_div{
+        border-radius: 21px;
+        border: none;
+        font-size: large;
+        background-color: rgb(28, 40, 178);
+
+      }
+      #reset{
+        border-radius: 21px;
+        border: none;
+        background-color: rgb(232, 19, 172);
+
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body >
+    <input
+      type="number"
+      name="no_1"
+      id="no_1"
+      placeholder="Enter The First Number"
+    />
+    <br><br>
+    <input
+      type="number"
+      name="no_2"
+      id="no_2"
+      placeholder="Enter The Second Number"
+    />
+    <h1 id="h1">RESULT : <span id="result"></span></h1>
+
+    <button id="button_add" onclick="add()">ADD</button><br><br>
+    <button id="button_sub" onclick="sub()">SUB</button><br><br>
+    <button id="button_mul" onclick="mul()">MUL</button><br><br>
+    <button id="button_div" onclick="div()">DIV</button><br><br>
+    <button id="button_add" onclick="mod()">MOD</button><br><br>
+    <button id="button_sub" onclick="exp()">EXPONENTIAL</button><br><br>
+
+    <button onclick="reset()" id="reset">RESET</button><br><br>
+  </body>
+</html>
+
+<script>
+  const no1 = document.getElementById("no_1");
+  const no2 = document.getElementById("no_2");
+  const h1 = document.getElementById("h1");
+  const result = document.getElementById("result");
+
+  function add() {
+    if(no1.value == 0){
+        alert("enter first number")
+    }
+    else if(no2.value == 0){
+        alert("enter second number")
+    }
+
+    else{
+
+        result.innerText = `${parseInt(no1.value) + parseInt(no2.value)}`;
+    }
+
+  }
+  function sub() {
+    if(no1.value == 0){
+        alert("enter first number")
+    }
+    else if(no2.value == 0){
+        alert("enter second number")
+    }
+
+    else{
+
+        result.innerText = `${parseInt(no1.value) - parseInt(no2.value)}`;
+    }
+  }
+  function mul() {
+    if(no1.value == 0){
+        alert("enter first number")
+    }
+    else if(no2.value == 0){
+        alert("enter second number")
+    }
+
+    else{
+
+        result.innerText = `${parseInt(no1.value) * parseInt(no2.value)}`;
+    }
+  }
+  function div() {
+    if(no1.value == 0){
+        alert("enter first number")
+    }
+    else if(no2.value == 0){
+        alert("enter second number")
+    }
+
+    else{
+
+        result.innerText = `${parseInt(no1.value) / parseInt(no2.value)}`;
+    }
+  }
+
+  function reset() {
+    no1.value= "";
+    no2.value= "";
+    
+  }
+  function mod(){
+    if(no1.value == 0){
+        alert("enter first number")
+    }
+    else if(no2.value == 0){
+        alert("enter second number")
+    }
+
+    else{
+
+        result.innerText = `${parseInt(no1.value) % parseInt(no2.value)}`;
+    }
+  }
+  function exp(){
+    if(no1.value == 0){
+        alert("enter first number")
+    }
+    else if(no2.value == 0){
+        alert("enter second number")
+    }
+
+    else{
+
+        result.innerText = `${parseInt(no1.value) ** parseInt(no2.value)}`;
+    }
+  }
+
+  
+ 
+</script>
